@@ -1,0 +1,183 @@
+/* DEMO */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background-color: #f7b42c;
+  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  z-index: 999;
+  background: #00c9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #92fe9d,
+    #00c9ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transition: all 0.3s;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+
+#dismiss {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: none;
+  border: 2px #00416a !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  float: right;
+}
+
+#dismiss:hover {
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  font-size: 1.5em;
+  background-color: #f7b42c;
+  background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+  border-radius: 10px !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(310deg, #0072ff, #00c6ff, #ff0058);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  -o-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 33%;
+  }
+  50% {
+    background-position: 100% 68%;
+  }
+  100% {
+    background-position: 0% 33%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 33%;
+  }
+  50% {
+    background-position: 100% 68%;
+  }
+  100% {
+    background-position: 0% 33%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 33%;
+  }
+  50% {
+    background-position: 100% 68%;
+  }
+  100% {
+    background-position: 0% 33%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 33%;
+  }
+  50% {
+    background-position: 100% 68%;
+  }
+  100% {
+    background-position: 0% 33%;
+  }
+}
